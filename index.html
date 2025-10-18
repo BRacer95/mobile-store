@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>BR95 Mobile Store</title>
+  <meta name="title" content="BR95 Mobile Store">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./sho.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+    /* Header symmetry improvements */
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 24px;
+      padding: 0 16px;
+    }
+    .header-action {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header .input-wrapper {
+      flex: 1 1 0;
+      max-width: 320px;
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+    }
+    .header .logo {
+      flex: 0 0 auto;
+      font-size: 1.7rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 0 16px;
+    }
+    .header-action {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .header-action-btn, .header a[aria-label="cart"] {
+      margin: 0 4px;
+    }
+    @media (max-width: 600px) {
+      .header .container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+      .header .logo {
+        margin: 0 auto;
+      }
+      .header-action {
+        justify-content: center;
+      }
+    }
+  </style>
+
+
+  
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="input-wrapper">
+        <input type="search" name="search" placeholder="Search" class="input-field">
+
+        <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+      </div>
+
+      <a href="#" class="logo">BR95 Mobile</a>
+
+      <div class="header-action">
+
+        <button class="header-action-btn" aria-label="user">
+          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="wishlist.html" class="header-action-btn" aria-label="favorite list">
+          <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+          <span class="btn-badge" id="wishlist-count">0</span>
+        </a>
+      </div>
+
+        <a href="cart.html" class="header-action-btn" aria-label="cart">
+          <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+          <span class="btn-badge">0</span>
+        </a>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <!-- 
+    - #SIDEBAR
+  -->
+
+  <div class="sidebar" data-navbar>
+
+    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+      <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+    </button>
+
+    <nav class="navbar">
+      <ul class="navbar-list">
+
+        <li class="navbar-item">
+          <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="cart.html" class="navbar-link" data-nav-link>Cart</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="wishlist.html" class="navbar-link" data-nav-link>Wishlist</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#about" class="navbar-link" data-nav-link>About</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="#product" class="navbar-link" data-nav-link>Product</a>
+        </li>
+
+     
+
+      </ul>
+    </nav>
+
+    <ul class="contact-list">
+
+      <li>
+        <p class="contact-list-title">Contact Us</p>
+      </li>
+
+      <li class="contact-item">
+        <address class="address">
+Karimnagar 505525 , annapurna complex        </address>
+      </li>
+
+      <li class="contact-item">
+        <a href="mailto:support@samsungstore.com" class="contact-link">support@samsungstore.com</a>
+      </li>
+
+      <li class="contact-item">
+        <a href="tel:00001235567890" class="contact-link">+91-956739209</a>
+      </li>
+
+    </ul>
+
+    
+  
+
+  </div>
+
+  <div class="overlay" data-overlay data-nav-toggler></div>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="home">
+        <div class="container">
+
+          <ul class="hero-list">
+
+            <li>
+              <div class="hero-card">
+
+                <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                  <img src="./assets/imgs/aser.jpg" height="396" alt="Art Deco Home"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3>
+                    <a href="#" class="card-title">GALAXY S</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="colspan-2">
+              <div class="hero-card">
+
+                <figure class="card-banner img-holder" style="--width: 568; --height: 389;">
+                  <img src="./assets/imgs/ux.jpg" width="568" height="389" alt="Helen Chair"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3>
+                    <a href="#" class="card-title" style="color: aliceblue;">GALAXY A</a>
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="hero-card">
+
+                <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                  <img src="./assets/imgs/zser.jpg" width="285" height="396" alt="Vase Of Flowers"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3>
+                    <a href="#" class="card-title">GALAXY Z</a>
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="colspan-2">
+              <div class="hero-card">
+
+                <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                  <img src="./assets/imgs/mser.jpg" width="580" height="213" alt="Wood Eggs"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3>
+                    <a href="#" class="card-title" style="color: aquamarine;">GALAXY M</a>
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="colspan-2">
+              <div class="hero-card">
+
+                <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                  <img src="./assets/imgs/note.jpeg" width="580" height="213" alt="Table Wood Pine"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3>
+                    <a href="#" class="card-title">GALAXY NOTE</a>
+                  </h3>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <h2 class="section-title">BR95 Mobile Store</h2>
+
+          <p class="section-text">
+            Premium smartphones with cutting-edge technology at competitive prices
+          </p>
+
+        </div>
+      </section>
+
+
+      <!-- 
+        - #PRODUCTS
+      -->
+
+      <section class="section product" id="product" aria-label="product">
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="h2 section-title">CATEGORIES</h2>
+
+            <ul class="filter-btn-list">
+
+              <li class="filter-btn-item">
+                <button class="filter-btn active" data-filter-btn="all">All Products</button>
+              </li>
+
+              <li class="filter-btn-item">
+                <button class="filter-btn" data-filter-btn="accessory">FLAGSHIP</button>
+              </li>
+
+              <li class="filter-btn-item">
+                <button class="filter-btn" data-filter-btn="decoration">MID-RANGE</button>
+              </li>
+
+              <li class="filter-btn-item">
+                <button class="filter-btn" data-filter-btn="furniture">BUDGET</button>
+              </li>
+
+            </ul>
+          </div>
+
+          <ul class="grid-list product-list" data-filter="all">
+
+            <li class="decoration">
+              <div class="product-card" data-product-id="product-1">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy S24 Ultra.jpg" width="300" height="300" loading="lazy"
+                    alt="Galaxy S24 Ultra" class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+
+                  <ul class="badge-list">
+
+                    <li>
+                      <div class="badge orange">Sale</div>
+                    </li>
+
+                    <li>
+                      <div class="badge cyan">-10%</div>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy S24 Ultra</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <del class="del">₹1,29,999</del>
+
+                    <data class="price" value="10">₹1,19,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="accessory">
+              <div class="product-card" data-product-id="product-2">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy A55 5g.jpg" width="300" height="300" loading="lazy" alt="Galaxy A55 5G"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+
+                  <div class="card-badge">Out of Stock</div>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy A55 5G</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="30">₹39,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="decoration">
+              <div class="product-card" data-product-id="product-3">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy A35 5G.jpg" width="300" height="300" loading="lazy" alt="Galaxy A35 5G"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy A35 5G</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="40">₹31,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="accessory">
+              <div class="product-card" data-product-id="product-4">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy s24+.jpg" width="300" height="300" loading="lazy" alt="Galaxy S24+"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy S24+</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="17.10">₹1,04,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="accessory">
+              <div class="product-card" data-product-id="product-5">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                   <img src="./assets/imgs/Galaxy A25 5G.jpg" width="300" height="300" loading="lazy"
+                    alt="Galaxy A25 5G" class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy A25 5G</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="21">₹26,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="furniture">
+              <div class="product-card" data-product-id="product-6">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy M36 5G.jpg" width="300" height="300" loading="lazy" alt="Galaxy M36 5G"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy M36 5G</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="69.50">₹22,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="accessory">
+              <div class="product-card" data-product-id="product-7">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy A17.jpg" width="300" height="300" loading="lazy"
+                    alt="Galaxy A17" class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy A17 </a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="30.10">₹19,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="accessory">
+              <div class="product-card" data-product-id="product-8">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy F55.jpg" width="300" height="300" loading="lazy"
+                    alt="Galaxy f55" class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy f55</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="45">₹23,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="furniture">
+              <div class="product-card" data-product-id="product-9">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy Z fold 5.webp" width="300" height="300" loading="lazy" alt="Galaxy Z Fold5"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy Z Fold5</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="90">₹1,64,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="furniture">
+              <div class="product-card" data-product-id="product-10">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy F36.jpg" width="300" height="300" loading="lazy" alt="Galaxy f36"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy f36</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="40">₹12,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="decoration">
+              <div class="product-card" data-product-id="product-11">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy s24 Fe.jpg" width="300" height="300" loading="lazy" alt="Galaxy S24 Fe"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy S24 Fe</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="46">₹79,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="furniture">
+              <div class="product-card" data-product-id="product-12">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy Z Flip 5.jpg" width="300" height="300" loading="lazy" alt="Galaxy Z Flip5"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy Z Flip5</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="67">₹99,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="furniture">
+              <div class="product-card" data-product-id="product-13">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy A25 5G.jpg" width="300" height="300" loading="lazy"
+                    alt="Galaxy a25 5g" class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy a25 5g</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="50">₹17,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="accessory">
+              <div class="product-card" data-product-id="product-14">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy a54 5G.jpg" width="300" height="300" loading="lazy"
+                    alt="Galaxy A54 5G" class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy A54 5G</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="25">₹36,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="decoration">
+              <div class="product-card" data-product-id="product-15">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy Z Flip 5.jpg" width="300" height="300" loading="lazy"
+                    alt="Galaxy Z flip 5" class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy Z flip 5</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="15">₹14,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="decoration">
+              <div class="product-card" data-product-id="product-16">
+
+               <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy M35.jpg" width="300" height="300" loading="lazy"
+                    alt="Galaxy M35 5G" class="img-cover">
+
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy M35 5G</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="77">₹20,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="decoration">
+              <div class="product-card" data-product-id="product-17">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy A35 5G.jpg" width="300" height="300" loading="lazy" alt="Wood Eggs"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy a35 5g</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="19">₹17,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="decoration">
+              <div class="product-card" data-product-id="product-18">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy M36 5G.jpg" width="300" height="300" loading="lazy" alt="Wooden Box"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy m36</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="27">₹24,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="accessory">
+              <div class="product-card" data-product-id="product-19">
+
+                <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                  <img src="./assets/imgs/Galaxy A56.jpg" width="300" height="300" loading="lazy" alt="Wooden Cups"
+                    class="img-cover">
+
+                  <ul class="card-action-list">
+
+                    <li>
+                      <button class="card-action-btn add-to-cart" aria-label="add to cart" title="add to cart">
+                        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                    <li>
+                      <button class="card-action-btn add-to-wishlist" aria-label="add to wishlist" title="add to wishlist">
+                        <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </li>
+
+                  </ul>
+                </a>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="background-color: beige;">Galaxy a56</a>
+                  </h3>
+
+                  <div class="card-price">
+                    <data class="price" value="29">₹13,999</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+    </article>
+  </main>
+  <!-- - #FOOTER-->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">BR95 Mobile</a>
+
+          <ul>
+
+            <li class="footer-list-item">
+              <ion-icon name="location-sharp" aria-hidden="true"></ion-icon>
+
+              <address class="address">
+                karimnagar 505525 annapurna complex 
+              </address>
+            </li>
+    </div>
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Help </p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">TRACK ORDER</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Returns & Refunds</a>
+          </li>
+
+
+        </ul>
+
+        <ul class="footer-list">
+
+
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
+
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+
+         
+          <div class="wrapper">
+
+            <a href="#" class="footer-link">Term & Condition</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; happy shoppings <a href="#" class="copyright-link"> BR95 Mobile Store</a>.
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

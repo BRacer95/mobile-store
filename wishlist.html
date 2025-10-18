@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - KICKS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+      <div class="nav-action-btns" style="margin:20px 0;display:flex;justify-content:center;gap:18px;">
+        <a href="index.html" class="header-action-btn" aria-label="home" style="display:flex;align-items:center;gap:6px;background:linear-gradient(90deg,#43e97b,#38f9d7);border-radius:8px;padding:8px 22px;text-decoration:none;color:#fff;font-weight:700;box-shadow:0 2px 12px #b2f7ef;outline:none;transition:box-shadow 0.2s;">
+          <ion-icon name="home-outline" aria-hidden="true"></ion-icon> Home
+        </a>
+        <a href="cart.html" class="header-action-btn" aria-label="cart" style="display:flex;align-items:center;gap:6px;background:linear-gradient(90deg,#3a8dde,#005bea);border-radius:8px;padding:8px 22px;text-decoration:none;color:#fff;font-weight:700;box-shadow:0 2px 12px #b2d7ff;outline:none;transition:box-shadow 0.2s;">
+          <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon> Cart
+        </a>
+        <a href="wishlist.html" class="header-action-btn active" aria-label="favorite list" style="display:flex;align-items:center;gap:6px;background:linear-gradient(90deg,#ff7eb3,#ff758c);border-radius:8px;padding:8px 22px;text-decoration:none;color:#fff;font-weight:700;box-shadow:0 2px 12px #ffd7e0;outline:none;transition:box-shadow 0.2s;">
+          <ion-icon name="heart-outline" aria-hidden="true"></ion-icon> Wishlist
+        </a>
+      </div>
+    </header>
+    <main>
+        <h1>Your Wishlist</h1>
+        <div class="wishlist-container">
+          <div class="wishlist-header">
+            <span>Image</span>
+            <span>Product</span>
+            <span>Price</span>
+            <span>Actions</span>
+          </div>
+          <section id="wishlist-items">
+            <!-- Wishlist items will be loaded dynamically here -->
+          </section>
+        </div>
+    </main>
+  <script src="assets/js/script.js"></script>
+  <script src="wishlist.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

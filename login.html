@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    <!-- Using embedded styles for 100% guarantee of UI/UX execution -->
+    <style>
+        /* BASE & TYPOGRAPHY - Clean, Modern Look */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F8F8F8; /* Subtle warm off-white background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333333; /* Soft dark gray text */
+        }
+
+        /* LOGIN CONTAINER - Symmetry & Elevation */
+        .login-container {
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Soft elevation shadow */
+            width: 100%;
+            max-width: 380px; /* Controlled width for symmetry */
+            text-align: center;
+        }
+
+        /* HEADINGS & TEXT */
+        h1 {
+            color: #2C3E50; /* A dark, deep blue-gray for the brand name */
+            margin-bottom: 5px;
+            font-size: 2.2em;
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
+        
+        p {
+            color: #7f8c8d; /* Subdued secondary text color */
+            margin-bottom: 30px;
+        }
+
+        /* FORM CONTROLS - Clean and Balanced */
+        .form-control {
+            width: 100%;
+            padding: 14px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #E0E0E0; /* Subtle border */
+            border-radius: 8px;
+            box-sizing: border-box; /* Crucial for full-width symmetry */
+            transition: border-color 0.3s, box-shadow 0.3s;
+            font-size: 1em;
+        }
+
+        .form-control:focus {
+            border-color: #F9A87E; /* Warm focus color */
+            box-shadow: 0 0 0 3px rgba(249, 168, 126, 0.3); /* Subtle outer glow */
+            outline: none;
+        }
+
+        /* BUTTON - Warm, Subtle Gradient Accent */
+        .btn {
+            width: 100%;
+            padding: 15px 0;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            /* New Subtle & Warm Gradient */
+            background: linear-gradient(90deg, #FFBC73, #F9A87E); 
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(249, 168, 126, 0.5); 
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 168, 126, 0.6);
+        }
+
+        /* SIGNUP LINK */
+        .signup-link {
+            margin-top: 25px;
+            font-size: 0.9em;
+        }
+        .signup-link a {
+            color: #F9A87E; /* Use the primary warm color for links */
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .signup-link a:hover {
+            color: #FF7A59; /* Slightly deeper on hover */
+        }
+        
+        /* POPUP NOTIFICATION - Clean & Integrated */
+        .popup-notification {
+            position: fixed;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            z-index: 9999;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            font-size: 1em;
+            font-weight: 600;
+        }
+        /* Color matching the new warm scheme */
+        .popup-success { background: #68B46E; } /* Soft, reassuring green */
+        .popup-error { background: #FF7A59; } /* Soft coral for warnings */
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>BR95 mobiles</h1>
+        <p>Login to your account</p>
+        
+        <form id="loginForm">
+            <!-- Best practice autocomplete and required attributes -->
+            <input type="text" id="username" class="form-control" placeholder="Username" required autocomplete="username">
+            <input type="password" id="password" class="form-control" placeholder="Password" required autocomplete="current-password">
+            
+            <button type="submit" class="btn">Login</button>
+        </form>
+        
+        <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+      
+    </div>
+        <script>
+        // Popup notification helper
+        function showPopup(message, type = 'error') {
+            let popup = document.createElement('div');
+            popup.textContent = message;
+            
+            // Applies the clean CSS class styles
+            popup.classList.add('popup-notification', `popup-${type}`);
+            
+            document.body.appendChild(popup);
+            setTimeout(() => popup.remove(), 1800);
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value.trim();
+
+            if (!username || !password) {
+                // Client-side check: must not be empty
+                showPopup('Please enter both username and password.', 'error');
+                return;
+            }
+
+            // MODIFICATION: Login is now successful if both fields are non-empty
+            showPopup(`Welcome, ${username}! Access granted.`, 'success');
+            
+            // Redirect after a short delay
+            setTimeout(() => { 
+                window.location.href = 'index.html'; 
+            }, 1200);
+
+            // Note: The password field is not cleared here because the login is successful.
+        });
+        </script>
+</body>
+</html>
