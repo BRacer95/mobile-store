@@ -1,7 +1,5 @@
 
-# xt
-=======
-BR95  mobile store
+# BR95  mobile store ==
 
 A modern, responsive sneaker website built with clean design and user experience in modern approach 
 
